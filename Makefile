@@ -85,4 +85,4 @@ re: fclean all
 bonus:	${DIROBJS} ${BONUS_DIROBJS}
 		ar rcs ${NAME} ${DIROBJS} ${BONUS_DIROBJS} ${NAME}
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus
