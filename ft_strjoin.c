@@ -6,7 +6,7 @@
 /*   By: sameye <sameye@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 11:20:09 by sameye            #+#    #+#             */
-/*   Updated: 2021/05/04 11:20:24 by sameye           ###   ########.fr       */
+/*   Updated: 2021/05/10 20:26:17 by sameye           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	{
 		len_s1 = ft_strlen(s1);
 		len_s2 = ft_strlen(s2);
-		if (!(s_new = (char *)malloc(sizeof(char) * (len_s1 + len_s2 + 1))))
+		s_new = (char *)malloc(sizeof(char) * (len_s1 + len_s2 + 1));
+		if (!(s_new))
 			return (NULL);
 		ft_strncpy(s_new, s1, ft_strlen(s1));
 		ft_strcpy(s_new + ft_strlen(s1), s2);

@@ -6,7 +6,7 @@
 /*   By: sameye <sameye@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/06 23:59:16 by sameye            #+#    #+#             */
-/*   Updated: 2021/05/07 01:18:44 by sameye           ###   ########.fr       */
+/*   Updated: 2021/05/10 19:53:32 by sameye           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstadd_back(t_list **alst, t_list *new)
 {
-	t_list *tmp;
+	t_list	*tmp;
 
 	if (*alst == NULL)
 	{

@@ -6,15 +6,15 @@
 /*   By: sameye <sameye@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/11 13:27:42 by sameye            #+#    #+#             */
-/*   Updated: 2021/05/07 16:35:56 by sameye           ###   ########.fr       */
+/*   Updated: 2021/05/10 20:40:35 by sameye           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_atoi(const char *nptr)
 {
-	int i;
-	int sign;
-	int res;
+	int	i;
+	int	sign;
+	int	res;
 
 	i = 0;
 	sign = 1;

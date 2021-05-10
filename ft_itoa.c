@@ -6,7 +6,7 @@
 /*   By: sameye <sameye@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 11:04:24 by sameye            #+#    #+#             */
-/*   Updated: 2021/05/04 11:04:38 by sameye           ###   ########.fr       */
+/*   Updated: 2021/05/10 20:41:23 by sameye           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,12 @@
 
 char	*ft_itoa(int n)
 {
-	char *string;
+	char	*string;
 
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
-	if (!(string = (char *)malloc(sizeof(char) * 2)))
+	string = (char *)malloc(sizeof(char) * 2);
+	if (!(string))
 		return (NULL);
 	if (n < 0)
 	{

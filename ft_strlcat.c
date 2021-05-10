@@ -6,15 +6,15 @@
 /*   By: sameye <sameye@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/10 17:14:44 by sameye            #+#    #+#             */
-/*   Updated: 2021/05/04 11:20:45 by sameye           ###   ########.fr       */
+/*   Updated: 2021/05/10 20:38:36 by sameye           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
-	unsigned int i;
-	unsigned int j;
-	unsigned int k;
+	unsigned int	i;
+	unsigned int	j;
+	unsigned int	k;
 
 	i = 0;
 	j = 0;

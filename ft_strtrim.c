@@ -6,15 +6,15 @@
 /*   By: sameye <sameye@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:34:01 by sameye            #+#    #+#             */
-/*   Updated: 2021/05/04 12:37:00 by sameye           ###   ########.fr       */
+/*   Updated: 2021/05/10 21:15:28 by sameye           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-int		isinset(char c, char const *set)
+int	isinset(char c, char const *set)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (set[i] != '\0')
@@ -42,14 +42,14 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (j > i && isinset(s1[j - 1], set))
 		j--;
 	size = j - i;
-	if (!(res = malloc(sizeof(char) * (size + 1))))
+	res = malloc(sizeof(char) * (size + 1));
+	if (!(res))
 		return (NULL);
 	size = 0;
 	while (i < j)
 	{
-		res[size] = s1[i];
+		res[size] = s1[i++];
 		size++;
-		i++;
 	}
 	res[size] = '\0';
 	return (res);

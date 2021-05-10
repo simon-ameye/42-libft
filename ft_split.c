@@ -6,13 +6,13 @@
 /*   By: sameye <sameye@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/06 19:19:44 by sameye            #+#    #+#             */
-/*   Updated: 2021/05/07 01:28:02 by sameye           ###   ########.fr       */
+/*   Updated: 2021/05/10 21:11:35 by sameye           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char		**ft_free(char **result, int count)
+static char	**ft_free(char **result, int count)
 {
 	int	i;
 
@@ -26,13 +26,13 @@ static char		**ft_free(char **result, int count)
 	return (NULL);
 }
 
-int				ft_count(char const *s, char c)
+int	ft_count(char const *s, char c)
 {
 	int		count;
 	char	*str;
 
 	count = 0;
-	str = (char*)s;
+	str = (char *) s;
 	while (*str)
 	{
 		while (*str && *str == c)
@@ -45,31 +45,42 @@ int				ft_count(char const *s, char c)
 	return (count);
 }
 
-char			**ft_split(char const *s, char c)
+char	**ft_create_words(int count, char const *s, char c, char **res)
 {
-	char	**res;
 	int		i;
 	int		pos;
 	int		temp;
 
-	if (!s)
-		return (NULL);
-	if (!(res = malloc(sizeof(char *) * (ft_count(s, c) + 1))))
-		return (NULL);
 	i = 0;
 	pos = 0;
-	while (i < ft_count(s, c))
+	while (i < count)
 	{
 		while (s[pos] == c && s[pos] != '\0')
 			pos++;
 		temp = pos;
 		while (s[pos] != c && s[pos] != '\0')
 			pos++;
-		if (!(res[i] = ft_substr(s, temp, pos - temp)))
+		res[i] = ft_substr(s, temp, pos - temp);
+		if (!(res[i]))
 			return (ft_free(res, i - 1));
 		i++;
 		pos++;
+		res[i] = NULL;
 	}
-	res[i] = NULL;
+	return (res);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**res;
+	int		count;
+
+	if (!s)
+		return (NULL);
+	count = ft_count(s, c);
+	res = malloc(sizeof(char *) * (count + 1));
+	if (!(res))
+		return (NULL);
+	res = ft_create_words(count, s, c, res);
 	return (res);
 }

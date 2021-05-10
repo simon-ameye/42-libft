@@ -6,7 +6,7 @@
 /*   By: sameye <sameye@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:37:09 by sameye            #+#    #+#             */
-/*   Updated: 2021/05/06 14:42:26 by sameye           ###   ########.fr       */
+/*   Updated: 2021/05/10 20:33:56 by sameye           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	j = 0;
 	if (!s)
 		return (NULL);
-	if (!(str = malloc(sizeof(char) * (len + 1))))
+	str = malloc(sizeof(char) * (len + 1));
+	if (!(str))
 		return (NULL);
 	if (start > ft_strlen(s))
 	{

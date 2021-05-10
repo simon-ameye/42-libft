@@ -6,13 +6,13 @@
 /*   By: sameye <sameye@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/06 00:26:23 by sameye            #+#    #+#             */
-/*   Updated: 2021/05/06 00:44:38 by sameye           ###   ########.fr       */
+/*   Updated: 2021/05/10 19:52:38 by sameye           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		ft_is_found(const char *haystack, size_t i,
+static int	ft_is_found(const char *haystack, size_t i,
 				const char *needle, size_t len)
 {
 	int	index;
@@ -28,7 +28,7 @@ static int		ft_is_found(const char *haystack, size_t i,
 	return (1);
 }
 
-char			*ft_strnstr(const char *haystack,
+char	*ft_strnstr(const char *haystack,
 					const char *needle, size_t len)
 {
 	size_t	i;
