@@ -58,7 +58,7 @@ BONUS_OBJS	= ${BONUS_SRCS:.c=.o}
 DIROBJS = $(addprefix ${OBJS_DIR},${OBJS})
 BONUS_DIROBJS = $(addprefix ${OBJS_DIR},${BONUS_OBJS})
 
-CC = gcc -Wall -Wextra -Werror -O3
+CC = gcc -Wall -Wextra -Werror
 
 all: $(NAME)
 
