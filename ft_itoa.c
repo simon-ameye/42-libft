@@ -6,13 +6,13 @@
 /*   By: sameye <sameye@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 11:04:24 by sameye            #+#    #+#             */
-/*   Updated: 2021/05/13 18:21:21 by sameye           ###   ########.fr       */
+/*   Updated: 2021/05/13 18:24:09 by sameye           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_lenofint(int n)
+int	ft_lenofint(int n)
 {
 	int	len;
 
