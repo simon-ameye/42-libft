@@ -6,7 +6,7 @@
 /*   By: sameye <sameye@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/05 19:24:59 by sameye            #+#    #+#             */
-/*   Updated: 2021/05/10 20:39:13 by sameye           ###   ########.fr       */
+/*   Updated: 2021/05/13 18:21:38 by sameye           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,7 @@
 void	*ft_calloc(size_t count, size_t size)
 {
 	void		*result;
-	size_t		i;
 
-	i = 0;
 	result = malloc(count * size);
 	if (!(result))
 		return (NULL);
