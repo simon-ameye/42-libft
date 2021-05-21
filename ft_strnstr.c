@@ -6,7 +6,7 @@
 /*   By: sameye <sameye@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/06 00:26:23 by sameye            #+#    #+#             */
-/*   Updated: 2021/05/21 19:30:45 by sameye           ###   ########.fr       */
+/*   Updated: 2021/05/21 21:35:42 by sameye           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ char	*ft_strnstr(const char *haystack,
 		return (NULL);
 	i = 0;
 	is_found = 0;
-	while (i < len)
+	while (i < len && haystack[i])
 	{
 		if (haystack[i] == needle[0])
 		{
