@@ -6,7 +6,7 @@
 /*   By: sameye <sameye@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/10 17:14:44 by sameye            #+#    #+#             */
-/*   Updated: 2021/05/21 12:46:25 by sameye           ###   ########.fr       */
+/*   Updated: 2021/05/21 19:28:49 by sameye           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	while (dst[i] != '\0')
 		i++;
 	while (src[j] != '\0')
-	{
 		j++;
-	}
 	k = i;
 	while ((k + 2 <= (size)) && src[k - i] != '\0')
 	{

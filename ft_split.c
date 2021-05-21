@@ -6,7 +6,7 @@
 /*   By: sameye <sameye@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/06 19:19:44 by sameye            #+#    #+#             */
-/*   Updated: 2021/05/10 21:11:35 by sameye           ###   ########.fr       */
+/*   Updated: 2021/05/21 18:44:56 by sameye           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,9 +75,15 @@ char	**ft_split(char const *s, char c)
 	char	**res;
 	int		count;
 
-	if (!s)
-		return (NULL);
 	count = ft_count(s, c);
+	if (!s || s[0] == 0 || !count)
+	{
+		res = (char **)malloc(sizeof(char *));
+		if (!(res))
+			return (NULL);
+		res[0] = 0;
+		return (res);
+	}
 	res = malloc(sizeof(char *) * (count + 1));
 	if (!(res))
 		return (NULL);
