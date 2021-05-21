@@ -14,7 +14,6 @@ SRCS += ft_substr.c
 SRCS += ft_bzero.c
 SRCS += ft_isblank.c
 SRCS += ft_memchr.c 
-SRCS += ft_putchar.c
 SRCS += ft_split.c
 SRCS += ft_strlcat.c
 SRCS += ft_strncpy.c
