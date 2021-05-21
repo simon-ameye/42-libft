@@ -6,7 +6,7 @@
 /*   By: sameye <sameye@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/06 00:25:06 by sameye            #+#    #+#             */
-/*   Updated: 2021/05/06 00:42:48 by sameye           ###   ########.fr       */
+/*   Updated: 2021/05/21 22:56:32 by sameye           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strchr(const char *s, int c)
 	{
 		while (s[i])
 		{
-			if (s[i] == c)
+			if (s[i] == (char)c)
 				return ((char *)&(s[i]));
 			i++;
 		}
